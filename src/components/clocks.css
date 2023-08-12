@@ -1,0 +1,43 @@
+.clock {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: relative;
+}
+
+.hour,
+.minute,
+.second {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: transform 0.5s cubic-bezier(0.4, 2.3, 0.9, 1);
+}
+
+.hour {
+  height: 4px;
+  background: linear-gradient(to left, #969696 77%, rgba(31, 30, 30, 0) 0%);
+}
+
+.minute {
+  background: linear-gradient(to left, #969696 93%, rgba(31, 30, 30, 0) 0%);
+}
+
+.second {
+  background: linear-gradient(to left, #969696 95%, rgba(31, 30, 30, 0) 0%);
+}
+
+.center-dot {
+  width: 8px;
+  height: 8px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
