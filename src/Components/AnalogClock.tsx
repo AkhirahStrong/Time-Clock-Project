@@ -2,8 +2,8 @@ import React from "react";
 import Clock from "./clocks";
 
 const AnalogClock = () => {
-  // analog clock implementation goes here
-  return <Clock type="analog" />;
+  // Your analog clock implementation goes here
+  return <Clock type="analog"></Clock>;
 };
 
 export default AnalogClock;

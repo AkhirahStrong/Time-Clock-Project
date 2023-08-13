@@ -1,15 +1,16 @@
 import React from "react";
-import Clock from "./components/clocks";
-import ClockDisplay from "./components/ClockDisplay";
-import Settings from "./components/Settings";
+import "./App.css";
+import Clock from "./Components/clocks";
+import ClockDisplay from "./Components/ClockDisplay";
+import Settings from "./Components/Settings";
 
-const App: React.FC = () => {
+function App() {
   return (
     <div className="App">
-      <h1>World Clock App</h1>
+      <h1>Clock App</h1>
       <Settings></Settings>
     </div>
   );
-};
+}
 
 export default App;

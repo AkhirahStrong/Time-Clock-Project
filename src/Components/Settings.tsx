@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ClockDisplay from "./ClockDisplay";
+import ClockDisplay from "./ClockDisplay"; // Import the ClockDisplay component
 
 class Settings extends Component {
   constructor(props) {

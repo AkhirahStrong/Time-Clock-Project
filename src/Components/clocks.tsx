@@ -22,7 +22,7 @@ const Clock: React.FC<ClockProps> = ({ type }) => {
     const formattedTime = time.toLocaleTimeString();
     return (
       <div>
-        <p className="DigitalClockFace">{formattedTime}</p>
+        <p>{formattedTime}</p>
       </div>
     );
   }
