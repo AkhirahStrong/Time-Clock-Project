@@ -1,0 +1,31 @@
+.addClock {
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  color: rgb(18, 79, 186);
+  position: absolute;
+  left: 700px;
+  top: 410px;
+  justify-content: center;
+  align-items: center;
+  margin: 45px;
+}
+
+/* Apply these styles for mobile view */
+@media (max-width: 768px) {
+  .addClock {
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    color: rgb(18, 79, 186);
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto; /* Center horizontally */
+  }
+}

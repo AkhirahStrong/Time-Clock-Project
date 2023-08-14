@@ -1,8 +1,13 @@
-import React, { Component } from "react";
+import React, { Component, ReactNode } from "react";
 import ClockDisplay from "./ClockDisplay"; // Import the ClockDisplay component
+import "./Setting.css";
 
-class Settings extends Component {
-  constructor(props) {
+interface SettingsState {
+  clocks: ReactNode[];
+}
+
+class Settings extends Component<{}, SettingsState> {
+  constructor(props: {}) {
     super(props);
     this.state = {
       clocks: [
@@ -26,7 +31,7 @@ class Settings extends Component {
     this.setState({ clocks: newClocks });
   };
 
-  handleRemoveClock = (index) => {
+  handleRemoveClock = (index: number) => {
     const { clocks } = this.state;
     const newClocks = [...clocks];
     newClocks.splice(index, 1);
@@ -38,7 +43,9 @@ class Settings extends Component {
 
     return (
       <div>
-        <button onClick={this.handleAddClock}>Add New Clock</button>
+        <button className="addClock" onClick={this.handleAddClock}>
+          Add New Clock
+        </button>
         <div>
           {clocks.map((clock, index) => (
             <div key={index} className="clock-wrapper">

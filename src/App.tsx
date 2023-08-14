@@ -7,7 +7,7 @@ import Settings from "./Components/Settings";
 function App() {
   return (
     <div className="App">
-      <h1>Clock App</h1>
+      <h1>World Clock</h1>
       <Settings></Settings>
     </div>
   );

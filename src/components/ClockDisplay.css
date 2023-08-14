@@ -1,1 +1,58 @@
+.time-label {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+}
 
+.removeButton {
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  color: rgb(18, 79, 186);
+  justify-content: center;
+  align-items: center;
+  margin: 16px 500px;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  margin-left: -150px;
+  margin-top: 166px;
+  align-items: center;
+  justify-content: center;
+}
+
+.radioSelection {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+/* Apply these styles for mobile view */
+@media (max-width: 768px) {
+  .time-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .removeButton {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px auto;
+  }
+
+  .radioGroup {
+    margin-left: 0;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .radioSelection {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

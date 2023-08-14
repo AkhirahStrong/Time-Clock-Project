@@ -1,9 +1,29 @@
 .clock {
-  width: 200px;
-  height: 200px;
+  position: relative;
+  width: 205px;
+  height: 205px;
   border: 2px solid #333;
   border-radius: 50%;
-  position: relative;
+  background-color: #2f363e;
+  color: #fff;
+  box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25);
+  inset: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  inset: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  inset: -5px -5px 15px rgba(0, 0, 0, 0.75);
+  margin: auto 625px;
+  margin-top: 50px;
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
 }
 
 .hour,
@@ -40,4 +60,59 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.timeDropdown {
+  margin-bottom: 200px;
+  /* margin: 20px;
+  text-align: center; */
+}
+
+.TimezoneDropdown__control {
+  background-color: #f7f7f7;
+  margin: auto;
+  max-width: 100%;
+}
+
+.TimezoneDropdown__menu {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.timeDropdownAnalog {
+  margin: 100px;
+}
+
+.timeDropdownAnalog {
+  /* text-align: center; 
+  margin-bottom: 20px;  */
+}
+
+.digitalTimeDisplay {
+  display: flex;
+  color: #fff;
+  font-size: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-left: -100px;
+  border: #969696 2px solid;
+  background-color: rgba(151, 181, 237, 0.5);
+}
+
+/* Apply these styles for mobile view */
+@media (max-width: 768px) {
+  .addClock {
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    color: rgb(18, 79, 186);
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto; /* Center horizontally */
+  }
 }

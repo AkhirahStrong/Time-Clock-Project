@@ -1,0 +1,16 @@
+.App h1 {
+  background-color: rgb(8, 52, 90, 0.75);
+  display: flex;
+  margin: 0;
+  padding: 5%;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+.App {
+  background-image: url("./imgs/earth.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
+}
