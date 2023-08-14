@@ -10,8 +10,10 @@
   inset: 5px 5px 10px rgba(0, 0, 0, 0.5);
   inset: 5px 5px 20px rgba(0, 0, 0, 0.2);
   inset: -5px -5px 15px rgba(0, 0, 0, 0.75);
-  margin: auto 625px;
-  margin-top: 50px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  margin-top: -120px;
 }
 
 .number {
@@ -79,6 +81,7 @@
   background-color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin: auto;
+  margin-left: -240px;
 }
 
 .timeDropdownAnalog {
@@ -96,12 +99,25 @@
   font-size: 50px;
   align-items: center;
   justify-content: center;
-  margin-left: -100px;
-  border: #969696 2px solid;
+  margin-left: 240px;
+  max-width: 75%;
   background-color: rgba(151, 181, 237, 0.5);
 }
 
 /* Apply these styles for mobile view */
+
+@media (min-width: 400px) and (max-width: 768px) {
+  .clock {
+    width: 205px;
+    height: 205px;
+    display: flex;
+    /* justify-content: center; */
+    margin-top: auto;
+    align-items: center;
+    margin: 10px auto;
+  }
+}
+
 @media (max-width: 768px) {
   .addClock {
     display: flex;
@@ -113,6 +129,41 @@
     color: rgb(18, 79, 186);
     justify-content: center;
     align-items: center;
-    margin: 10px auto; /* Center horizontally */
+    margin: 10px auto;
+  }
+
+  .digitalTimeDisplay {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 10px auto;
+  }
+
+  .clock {
+    width: 205px;
+    height: 205px;
+    display: flex;
+    /* justify-content: center; */
+    margin-top: -200px;
+    align-items: center;
+    margin: 10px auto;
+  }
+}
+
+/* Apply these styles for larger screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for tablet screens */
+
+  .digitalTimeDisplay {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 10px auto;
   }
 }

@@ -12,5 +12,25 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
-  height: 1000px;
+  /* align-items: center; */
+  /* justify-content: center; */
+  height: 100vh;
+  /* max-height: 100%; */
+}
+
+/* Media query */
+@media (max-width: 768px) {
+  .App {
+    background-image: none;
+    background-color: rgb(8, 52, 90, 0.75);
+    padding: 20px;
+    background-size: cover;
+    height: 3000px;
+  }
+
+  .App h1 {
+    background-color: transparent;
+    padding: 10px;
+    font-size: 20px;
+  }
 }

@@ -4,7 +4,7 @@ import "./clocks.css";
 import ClockNumbers from "./ClockNumbers";
 import moment from "moment-timezone";
 import TimezoneDropdown from "./TimezoneDropdown";
-import { ClockTime, getCurrentTimeInTimezone } from "./ClockTime"; // Import the ClockTime object
+// import { ClockTime, getCurrentTimeInTimezone } from "./ClockTime";
 
 interface ClockProps {
   type: "analog" | "digital";
@@ -14,39 +14,29 @@ interface ClockProps {
 const Clock: React.FC<ClockProps> = ({ type, initialTimezone = "UTC" }) => {
   const [time, setTime] = useState(new Date());
   const [selectedTimezone, setSelectedTimezone] = useState("UTC");
-  const [clockTime, setClockTime] = useState<ClockTime>(
-    getCurrentTimeInTimezone(initialTimezone)
-  );
+
+  const getCurrentTime = () => {
+    return moment(new Date())
+      .tz(selectedTimezone)
+      .format("YYYY-MM-DD HH:mm:ss");
+  };
 
   // Update the time every second
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setClockTime(getCurrentTimeInTimezone(clockTime.timezone));
-      setTime(new Date());
+      setTime(new Date(getCurrentTime()));
     }, 1000);
 
     // Clean up the interval when the component is unmounted
     return () => clearInterval(intervalId);
-  }, [clockTime.timezone, selectedTimezone]);
+  }, [selectedTimezone]);
 
   const handleTimezoneChange = (timezone: string) => {
     console.log("Selected timezone:", timezone);
     setSelectedTimezone(timezone);
-    const currentTime = moment().tz(timezone); // Get current time in selected timezone
-    console.log("New time:", currentTime.toDate());
-    setTime(currentTime.toDate());
-    setClockTime(getCurrentTimeInTimezone(timezone));
-    setSelectedTimezone(timezone);
+    // convert to new date using moment formatted string (this breaks locality)
+    setTime(new Date(getCurrentTime()));
   };
-
-  const formattedDate = new Date("2019-02-19T06:00:00Z").toLocaleDateString(
-    "en-gb",
-    {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    }
-  );
 
   if (type === "digital") {
     const formattedTime = time.toLocaleTimeString();
@@ -71,8 +61,6 @@ const Clock: React.FC<ClockProps> = ({ type, initialTimezone = "UTC" }) => {
   const hourDeg = (360 / 12) * (hours + minutes / 60) + 90; // Add 90-degree rotation
   const minuteDeg = (360 / 60) * minutes + 90; // Add 90-degree rotation
   const secondDeg = (360 / 60) * seconds + 90; // Add 90-degree rotation
-
-  const numbers = [...Array(12)].map((_, index) => index + 1);
 
   return (
     <div>

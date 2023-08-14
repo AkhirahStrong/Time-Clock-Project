@@ -17,15 +17,44 @@
 /* Apply these styles for mobile view */
 @media (max-width: 768px) {
   .addClock {
-    display: flex;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    color: rgb(18, 79, 186);
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto; /* Center horizontally */
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px auto;
+    display: block;
+    position: static;
+    /* display: flex;
+    top: 190px;
+    left: auto;
+    right: 208px; */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for tablet screens */
+  .addClock {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px auto;
+    display: block;
+    position: static;
+    /* display: flex;
+    top: 190px;
+    left: auto;
+    right: 208px; */
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Styles for desktop screens */
+  .addClock {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px auto;
+    display: block;
+    position: static;
+    /* display: flex;
+    top: 190px;
+    left: auto;
+    right: 208px; */
   }
 }

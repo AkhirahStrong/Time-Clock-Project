@@ -3,7 +3,7 @@
   /* Apply custom styles to the control element */
   background-color: #f7f7f7;
   margin: auto;
-  max-width: 100%;
+  max-width: 50%;
 }
 
 .TimezoneDropdown__menu {
@@ -13,11 +13,21 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 200px;
   margin: auto;
+  margin-left: -10px;
+  max-width: 50%; /* Add this */
+  position: absolute; /* Change this to absolute */
+  left: 50%; /* Add this */
+  transform: translateX(-50%); /* Add this */
 }
 
 /* Add more custom styles as needed */
 @media (min-width: 768px) {
   .TimezoneDropdown__menu {
-    max-width: 50%; /* Limit the width on larger screens */
+    max-width: 50%;
+    /* margin: auto; */
+    max-width: 50%; /* Add this */
+    position: absolute; /* Change this to absolute */
+    left: 50%; /* Add this */
+    transform: translateX(-50%); /* Add this */
   }
 }

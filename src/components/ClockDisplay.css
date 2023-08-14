@@ -24,6 +24,7 @@
   margin-top: 166px;
   align-items: center;
   justify-content: center;
+  margin: 10px;
 }
 
 .radioSelection {
@@ -36,17 +37,23 @@
   .time-label {
     font-size: 20px;
     margin-bottom: 10px;
+    color: rgb(226, 228, 233);
   }
 
   .removeButton {
     padding: 10px;
     font-size: 16px;
+    margin: 100px auto;
+    padding: 10px;
+    font-size: 16px;
     margin: 10px auto;
+    display: block;
+    position: static;
   }
 
   .radioGroup {
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 50px;
     align-items: center;
     justify-content: center;
   }
@@ -54,5 +61,39 @@
   .radioSelection {
     margin-left: 0;
     margin-top: 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for tablet screens */
+  .removeButton {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px auto;
+    display: block;
+    position: static;
+    /* display: flex;
+    top: 190px;
+    left: auto;
+    right: 208px; */
+  }
+
+  .radioGroup {
+    margin: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Styles for desktop screens */
+  .removeButton {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px auto;
+    display: block;
+    position: static;
+    /* display: flex;
+    top: 190px;
+    left: auto;
+    right: 208px; */
   }
 }
